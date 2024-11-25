@@ -1,5 +1,7 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from crewai_tools import VisionTool
+import os
 
 @CrewBase
 class NumberCruncherCrew:
@@ -7,6 +9,9 @@ class NumberCruncherCrew:
 
     agents_config = "config/agents.yaml"
     tasks_config = "config/tasks.yaml"
+
+    #os.environ["OPENAI_MODEL_NAME"] = "gpt-4o-mini"
+    vision_tool = VisionTool()
 
     @agent
     def question_parser_agent(self) -> Agent:
@@ -20,6 +25,20 @@ class NumberCruncherCrew:
             config=self.agents_config["answer_generator_agent"],
         )
 
+    #@agent
+    #def image_text_extractor(self) -> Agent:
+    #    return Agent(
+    #        config=self.agents_config['image_text_extractor'],
+    #       tools=[self.vision_tool],
+    #        verbose=True
+    #    )
+
+    #@task
+    #def extract_text_from_image(self) -> Task:
+    #    return Task(
+    #        config=self.tasks_config['extract_text_from_image'],
+    #    )
+    
 
     @task
     def parse_question(self) -> Task:

@@ -16,3 +16,12 @@ answer_generator_agent:
     Generate a precise answer in max two sentences for question {question_text}
   backstory: >
      You are a QnA agent,  who can review question and generate precision answer for a question
+
+#image_text_extractor:
+#  role: >
+#    Image Text Extraction Specialist
+#  goal: >
+#    Extract and analyze text from images efficiently using AI-powered tools. You should get the text from {image_url} if {image_file} is not empty
+#  backstory: >
+#    You are an expert in text extraction, specializing in using AI to process and analyze textual content from images. Make sure you use the tools provided.
+#  max_iter: 1
