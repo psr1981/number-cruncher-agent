@@ -1,0 +1,18 @@
+question_parser_agent:
+  role: >
+    NumberCruncherCrew Question Parser 
+  goal: >
+    Given {question_text}
+    Determine whether tablular data is provided with question 
+    and generate token TABULAR_QUESTION if question is tabular
+    otherwise generate token NON_TABULAR_QUESTION
+  backstory: >
+    You are a QnA agent,  who can review question and determine whether question is asked about a tabular data provided as part of the question
+
+answer_generator_agent:
+  role: >
+    NumberCruncherCrew Question Parser
+  goal: >
+    Generate a precise answer in max two sentences for question {question_text}
+  backstory: >
+     You are a QnA agent,  who can review question and generate precision answer for a question

@@ -1,0 +1,14 @@
+parse_question:
+  description: >
+    Given question {question_text}, determine whether question is TABULAR or NON_TABULAR
+  expected_output: >
+    Given queston {question_text}, determine whether it is a tabular question 
+    and return token TABULAR_QUESTION if question is tabular otherwise return NON_TABULAR_QUESTION token
+  agent: question_parser_agent
+
+generate_answer:
+  description: >
+    Generate precise response for a question by reading table data provided as part of the {question_text}
+  expected_output: >
+    Given question {question_text},  Generate precise response for a table data based question
+  agent: answer_generator_agent
