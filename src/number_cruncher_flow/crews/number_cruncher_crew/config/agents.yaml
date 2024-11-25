@@ -1,6 +1,6 @@
 question_parser_agent:
   role: >
-    NumberCruncherCrew Question Parser 
+    NumberCruncherCrew Question Parser Agent
   goal: >
     Given {question_text}
     Determine whether tablular data is provided with question 
@@ -11,11 +11,21 @@ question_parser_agent:
 
 answer_generator_agent:
   role: >
-    NumberCruncherCrew Question Parser
+    NumberCruncherCrew Answer Generator Agent
   goal: >
     Generate a precise answer in max two sentences for question {question_text}
   backstory: >
      You are a QnA agent,  who can review question and generate precision answer for a question
+
+prompt_generator_agent:
+  role: >
+    NumberCruncherCrew additional help generator
+  goal: >
+     Given {question_text},  
+     Generate 3 additional prompts to help user to get his answer correct
+  backstory: >
+     You are a QnA agent,  who can review question and generate additional prompts to help user get to precise response to their question
+
 
 #image_text_extractor:
 #  role: >

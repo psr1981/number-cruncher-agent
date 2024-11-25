@@ -44,10 +44,10 @@ class NumberCruncherFlow(Flow[NumberCruncherState]):
         print("Response generated", result.raw)
         self.state.question_response = result.raw
 
-    @listen(generate_question_response)
-    def save_question_response(self):
-        print("printing question response")
-        print(self.state.question_response)
+    #@listen(generate_question_response)
+    #def save_question_response(self):
+    #    print("printing question response")
+    #    print(self.state.question_response)
 
 def kickoff():
     number_cruncher_flow = NumberCruncherFlow()

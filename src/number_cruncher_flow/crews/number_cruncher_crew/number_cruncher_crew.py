@@ -24,6 +24,12 @@ class NumberCruncherCrew:
         return Agent(
             config=self.agents_config["answer_generator_agent"],
         )
+    
+    @agent
+    def prompt_generator_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config["prompt_generator_agent"],
+        )
 
     #@agent
     #def image_text_extractor(self) -> Agent:
@@ -51,6 +57,12 @@ class NumberCruncherCrew:
     def generate_answer(self) -> Task:
         return Task(
             config=self.tasks_config["generate_answer"],
+        )
+
+    @task
+    def generate_additional_prompts(self) -> Task:
+        return Task(
+            config=self.tasks_config["generate_additional_prompts"],
         )
 
     @crew

@@ -13,6 +13,13 @@ generate_answer:
     Given question {question_text},  Generate precise response for a table data based question
   agent: answer_generator_agent
 
+generate_additional_prompts:
+  description: >
+    Generate additional hints for user 
+  expected_output: >
+    Given question {question_text},  Generate additional prompts to help user to get precise response for their question
+  agent: prompt_generator_agent
+
 #extract_text_from_image:
 #  agent: image_text_extractor
 #  description: >
