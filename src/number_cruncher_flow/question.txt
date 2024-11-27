@@ -1,1 +1,5 @@
-header [id   name ] \n Row no 1 [ 1001  tom ] \n Row no 2 [ 1002  jerry ]  \n Row no 3 [ 1003  harry ]  \n   What is the id for tom ?
+header [id  name country sales ] \n 
+Row no 1 [ 1001 tom USA 10 ] \n 
+Row no 2 [ 1002  jerry India 15 ]  \n 
+Row no 3 [ 1003  harry USA 25 ]  \n  
+ What is total sales amount for USA ?
